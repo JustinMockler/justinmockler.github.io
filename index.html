@@ -5,105 +5,169 @@
     <title>Justin Mockler</title>
     <meta name="description" content="Justin Mockler is a Senior Staff UX Manager at Google (Android &amp; Business Communication) based in the San Francisco Bay Area." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://justinmockler.com/" />
     <link href="favicon.png" rel="icon" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Trirong:wght@700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/ae91e667f0.js" crossorigin="anonymous"></script>
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://justinmockler.com/" />
+    <meta property="og:title" content="Justin Mockler" />
+    <meta property="og:description" content="Justin Mockler is a Senior Staff UX Manager at Google (Android &amp; Business Communication) based in the San Francisco Bay Area." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Justin Mockler" />
+    <meta name="twitter:description" content="Justin Mockler is a Senior Staff UX Manager at Google (Android &amp; Business Communication) based in the San Francisco Bay Area." />
+
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Trirong:wght@700&display=swap" rel="stylesheet" />
+
     <style>
+      :root {
+        --bg-color: #ffffff;
+        --text-primary: #333333;
+        --text-muted: #767676;
+        --link-color: #1565c0;
+        --link-hover: #1e88e5;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-color: #121212;
+          --text-primary: #e3e3e3;
+          --text-muted: #9aa0a6;
+          --link-color: #8ab4f8;
+          --link-hover: #aecbfa;
+        }
+      }
+
       body,
       html {
         height: 100%;
       }
+
       body {
-        background-color: #ffffff;
+        background-color: var(--bg-color);
+        color: var(--text-primary);
         margin: 0;
+        transition: background-color 0.2s ease, color 0.2s ease;
       }
+
       .container {
-        height: 100%;
+        min-height: 100vh;
+        min-height: 100dvh;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin-left: 16px;
-        margin-right: 16px;
+        box-sizing: border-box;
+        padding: 24px 16px;
       }
+
       .name,
       .title,
       .social,
       .contact {
         text-align: center;
       }
-      .name,
-      .social a:hover {
-        color: #333333;
-      }
-      .title,
-      .social a {
-        color: #767676;
-      }
+
       .name {
+        color: var(--text-primary);
         font-family: 'Trirong', serif;
-        font-size: 3.2em;
+        font-size: clamp(2.4em, 6vw, 3.2em);
         font-weight: bold;
+        line-height: 1.2;
+        margin: 0 0 12px 0;
       }
+
       .title {
-        font-family: 'Rubik', sans-serif;
-        font-size: 2em;
+        color: var(--text-muted);
+        font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: clamp(1.4em, 3.5vw, 2em);
+        line-height: 1.4;
+        margin: 0;
       }
+
       .title img {
         position: relative;
         top: 0.25em;
+        vertical-align: baseline;
       }
+
       .social {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 12px;
         margin-top: 20px;
         margin-bottom: 20px;
       }
+
       .social a {
         font-size: 3.5em;
         text-decoration: none;
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        color: var(--text-muted);
         transition: transform 0.2s ease, color 0.2s ease;
       }
+
+      .social a svg {
+        height: 1em;
+        width: auto;
+        fill: currentColor;
+      }
+
       .social a:hover {
+        color: var(--text-primary);
         transform: translateY(-2px);
       }
+
       .contact {
-        font-family: 'Rubik', sans-serif;
+        font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-size: 1.2em;
       }
+
       .contact a {
-        color: #1565c0;
+        color: var(--link-color);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        transition: color 0.2s ease;
       }
+
       .contact a:hover {
-        color: #1e88e5;
+        color: var(--link-hover);
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--link-color);
+        outline-offset: 4px;
+        border-radius: 4px;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="name">Justin Mockler</div>
+    <main class="container">
+      <h1 class="name">Justin Mockler</h1>
       <div class="title">
         Senior Staff UX Manager<br />
         Android &amp; Business Communication<br />
-        @ <img src="logo_google.svg" height="33" alt="Google Logo" />, Mountain View, California
+        @ <img src="logo_google.svg" width="98" height="33" alt="Google" />, Mountain View, California
       </div>
       <div class="social">
-        <a href="https://www.linkedin.com/in/justinmockler" aria-label="View Justin Mockler on LinkedIn">
-          <i class="fa-brands fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/justinmockler" target="_blank" rel="noopener noreferrer" aria-label="View Justin Mockler on LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"></path></svg>
         </a>
-        <a href="https://github.com/JustinMockler" aria-label="View Justin Mockler on GitHub">
-          <i class="fa-brands fa-square-github"></i>
+        <a href="https://github.com/JustinMockler" target="_blank" rel="noopener noreferrer" aria-label="View Justin Mockler on GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path fill="currentColor" d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM223.7 96c-88.4 0-159.7 72.2-159.7 160.6 0 69.4 44.1 126.9 103.4 148.4 8.4 3.1 16.6-2.5 16.6-10.9l0-25c-4.4 1.9-10 3.1-15 3.1-20.6 0-32.8-11.2-41.6-32.2-3.4-8.4-7.2-13.4-14.4-14.4-3.7-.3-5-1.9-5-3.8 0-3.7 6.2-6.6 12.5-6.6 9.1 0 16.9 5.6 25 17.2 6.2 9.1 12.8 13.1 20.6 13.1s12.8-2.8 20-10c5.3-5.3 9.4-10 13.1-13.1-41.3-5-70.3-34.7-70.3-73.1 0-15.6 5.6-32.5 15-43.8-4.1-10.3-3.4-32.2 1.2-41.2 12.5-1.6 29.4 5 39.4 14.1 11.9-3.7 24.4-5.6 39.7-5.6s27.8 1.9 39.1 5.3c9.7-8.8 26.9-15.3 39.4-13.8 4.4 8.4 5 30.3 .9 40.9 10 11.9 15.3 27.8 15.3 44.1 0 38.4-29.1 67.5-70.9 72.8 10.6 6.9 17.8 21.9 17.8 39.1l0 32.5c0 9.4 7.8 14.7 17.2 10.9 56.6-21.6 100.9-78.1 100.9-148.1 0-88.4-71.9-160.6-160.3-160.6z"></path></svg>
         </a>
       </div>
       <div class="contact">
         <a href="mailto:justin@justinmockler.com">justin@justinmockler.com</a>
       </div>
-    </div>
+    </main>
   </body>
 </html>
